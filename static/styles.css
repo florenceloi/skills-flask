@@ -1,1 +1,16 @@
-/*Your styles can go here.*/
+body {
+    background-color: purple
+}
+
+input, select {
+    background-color: yellow;
+}
+
+input[name="lastname"] {
+    font-weight: bold;
+}
+
+div {
+    border: 8px dashed yellow;
+    padding: 0 20px;
+}

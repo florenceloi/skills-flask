@@ -1,12 +1,44 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Skills-Web</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
-    <!-- This page needs a form that can capture data about the user's
-    first name, last name, job title, and salary requirements. -->
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Application Form{% endblock %}
+
+{% block body %}
+    <div>            
+
+        <h1>Application Form</h1>
+        
+        <p>Hello Applicant! Thank you for applying to Ubermelon. We are excited that you would like to join our efforts in delivering the best melons to everyone worldwide. Please fill out the following form to start your application.</p>
+
+    </div>
+    <br>
+
+    <form action="/application" method="POST">
+
+        <label for="field-firstname">First Name:</label>
+        <input type="text" name="firstname" placeholder="Enter your first name" id="field-firstname">
+        <br>
+
+        <label for="field-lastname">Last Name:</label>
+        <input type="text" name="lastname" placeholder="Enter your last name" id="field-lastname">
+        <br>
+        <br>
+
+        <label for="field-salary">Salary Requirement:</label>
+        <input type="text" name="salary" placeholder="Enter as a number" id="field-salary">
+        <br>
+        <br>
+
+        <label for = "job-type">Select which job you are applying for:</label>
+        <br>
+        <select name = "job" id="job-type">
+            <option value="" disabled selected>Select your option</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="QA Engineer">QA Engineer</option>
+            <option value="Product Manager">Product Manager</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="submit">
+
+    </form>
+{% endblock %}
